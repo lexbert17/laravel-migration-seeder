@@ -22,9 +22,9 @@ return new class extends Migration
             $table->time('departure time');
             $table->time('arrival time');
             $table->string('train code');
-            $table->tinyInteger('number of carriaages');
-            $table->boolean('delay');
-            $table->boolean('deleted');
+            $table->tinyInteger('number of carriages');
+            $table->boolean('delay')->default(1);
+            $table->boolean('deleted')->default(0);
             $table->timestamps();
         });
     }
